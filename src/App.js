@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Courses from './pages/Courses'; // Import หน้า Courses
+import Courses from './pages/Courses';
 
 function App() {
     return (
@@ -13,10 +13,10 @@ function App() {
             <div>
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/woek" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/courses" element={<Courses />} /> {/* หน้า Courses */}
+                    <Route path="/courses" element={<Courses />} />
                 </Routes>
                 <Footer />
             </div>
