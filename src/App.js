@@ -13,7 +13,7 @@ function App() {
             <div>
                 <Header />
                 <Routes>
-                    <Route path="/-woek" element={<-Woek />} />
+                    <Route path="/-woek" element={<Woek />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/courses" element={<Courses />} />
