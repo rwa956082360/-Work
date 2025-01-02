@@ -46,7 +46,7 @@
 .philosophy {
     margin-top: 30px;
     padding: 20px;
-    background-color: #69af3986;
+    background-color: #68af39;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -116,19 +116,6 @@
 
 
 
-
-
-/* เนื้อหาหลัก */
-.main-content {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* หัวข้อ */
 .main-content h1 {
     color: #ff4500;
@@ -148,15 +135,15 @@
     margin: 20px auto;
     text-align: left;
     max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #ddee7f;
+    padding: 30px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #555;
 }
@@ -214,10 +201,12 @@
 
 /* แผนที่ Google Maps */
 .map-container {
-    margin-top: 30px;
-    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 50px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* กำหนดความกว้างให้เต็มคอนเทนเนอร์ */
+    height: 300px; /* กำหนดความสูงของคอนเทนเนอร์ */
 }
 
 
@@ -225,7 +214,7 @@
 .main-content {
     padding: 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 800px;
@@ -239,12 +228,7 @@
     font-size: 2.5em;
 }
 
-/* ข้อความย่อหน้า */
-.main-content p {
-    color: #333;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+
 
 /* รายการหลักสูตร */
 .course-list {
@@ -256,7 +240,7 @@
 }
 
 .course-card {
-    background-color: #fff;
+    background-color: #e0d863;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -357,7 +341,7 @@
 
 /* Modal Content */
 .modal-content {
-    background: white;
+    background: rgb(233, 93, 93);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -619,12 +603,6 @@ p {
     margin-bottom: 30px;
 }
 
-.image-container {
-    text-align: center;
-    margin: 0 10px;
-    max-width: 200px; /* กำหนดขนาดรูปเล็กลง */
-}
-
 .gallery-image {
     width: 100%; /* ให้รูปภาพมีความกว้างเต็มของ container */
     height: auto; /* ปรับอัตราส่วนรูปภาพ */
@@ -657,4 +635,89 @@ p {
     background-color: #6cf878;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* พื้นฐาน */
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b5e20; /* สีพื้นหลังเขียวเข้ม */
+    color: #ffffff; /* ข้อความสีขาว */
+}
+
+/* ปุ่ม */
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c48931;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-download:hover {
+    background-color: #1b5e20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-gallery,
+    .course-list {
+        flex-direction: column;
+    }
+
+    .image-container, 
+    .course-card {
+        width: 100%; /* การ์ดเต็มจอในมือถือ */
+        max-width: 100%;
+    }
+
+    .gallery-image {
+        height: 150px; /* ลดขนาดความสูงรูปในมือถือ */
+    }
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background: #c0392b;
 }

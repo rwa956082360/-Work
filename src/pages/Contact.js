@@ -4,22 +4,22 @@ import './styles/Pages.css'; // ใช้ CSS เดียวกันสำห�
 function Contact() {
     return (
         <main className="main-content">
-            <h1>Contact Us</h1>
-            <p>Have any questions or need help? Feel free to reach out to us!</p>
+            <h1>ติดต่อเรา</h1>
+            <p>มีคำถามหรือต้องการความช่วยเหลือ? อย่าลังเลที่จะติดต่อเรา!</p>
 
             {/* ฟอร์มติดต่อ */}
             <div className="contact-form">
                 <form>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                    <label htmlFor="name">ชื่อ:</label>
+                    <input type="text" id="name" name="name" placeholder="ใส่ชื่อของคุณ" required />
 
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    <label htmlFor="email">อีเมล:</label>
+                    <input type="email" id="email" name="email" placeholder="ใส่อีเมลของคุณ" required />
 
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                    <label htmlFor="message">ข้อความ:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="ป้อนข้อความของคุณ" required></textarea>
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit">ส่งข้อความ</button>
                 </form>
             </div>
 
